@@ -5,7 +5,7 @@ import android.app.Application
 import androidx.room.Room
 import com.isa.mynotes.feature_note.data.data_source.NoteDatabase
 import com.isa.mynotes.feature_note.domain.repository.NoteRepository
-import com.isa.mynotes.feature_note.domain.repository.NoteRepositoryImpl
+import com.isa.mynotes.feature_note.data.repository.NoteRepositoryImpl
 import com.isa.mynotes.feature_note.domain.use_case.*
 import dagger.Module
 import dagger.Provides
@@ -29,7 +29,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNoteRepository(db: NoteDatabase): NoteRepository{
+    fun provideNoteRepository(db: NoteDatabase): NoteRepository {
         return NoteRepositoryImpl(db.noteDao)
     }
 

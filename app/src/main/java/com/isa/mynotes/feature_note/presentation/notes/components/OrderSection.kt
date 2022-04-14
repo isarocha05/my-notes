@@ -3,6 +3,7 @@ package com.isa.mynotes.feature_note.presentation.notes.components
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.isa.mynotes.feature_note.domain.util.NoteOrder
 import com.isa.mynotes.feature_note.domain.util.OrderType

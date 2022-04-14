@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -26,11 +27,16 @@ class MainActivity : ComponentActivity() {
     @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
+
         setContent {
             MyNotesTheme {
                 Surface(
                     color = MaterialTheme.colors.background
                 ) {
+
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = Screen.NotesScreen.route){
                         composable(route= Screen.NotesScreen.route){

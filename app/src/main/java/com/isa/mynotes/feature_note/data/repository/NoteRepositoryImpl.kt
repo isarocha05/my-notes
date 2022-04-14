@@ -1,7 +1,8 @@
-package com.isa.mynotes.feature_note.domain.repository
+package com.isa.mynotes.feature_note.data.repository
 
 import com.isa.mynotes.feature_note.data.data_source.NoteDao
 import com.isa.mynotes.feature_note.domain.model.Note
+import com.isa.mynotes.feature_note.domain.repository.NoteRepository
 import kotlinx.coroutines.flow.Flow
 
 class NoteRepositoryImpl(private val dao: NoteDao): NoteRepository {
