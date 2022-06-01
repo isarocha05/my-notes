@@ -127,13 +127,13 @@ fun AddEditNoteScreen(
 
 
             Spacer(modifier = Modifier.height(16.dp))
-            TransparentHintTextField(text = contentState.text, hint = contentState.hint, onValueChange ={
+            TransparentHintTextField(text = contentState.text, hint = contentState.hint , onValueChange ={
                 viewModel.onEvent(AddEditNoteEvent.EnteredContent(it))
             } , onFocusChange = {
                 viewModel.onEvent(AddEditNoteEvent.ChangeContentFocus(it))
             },
                 isHintVisible = contentState.isHintVisible,
-                singleLine = true,
+                singleLine = false,
                 textStyle = MaterialTheme.typography.body1,
                 modifier = Modifier.fillMaxWidth()
             )
